@@ -1,5 +1,7 @@
 # Enumeration
 
+An enumeration is a specialised entity that represents a list of states or values of which one can selected per referencing entity or reference table.
+
 By using a separate table instead of flags within an entity you say clearly: This is a selection, you choose *one* value.
 Another thing is that with time people might come around and add properties, for example they might say that certain states might be represented by an image. 
 Or that one of the values is a default. That they should occur in a special order, have a different value, color or whatever.
