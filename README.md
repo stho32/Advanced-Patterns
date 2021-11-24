@@ -5,6 +5,7 @@ These are my notes on more advanced patterns in my software development practice
 No, I am not talking Adapter, Singleton or Factory. 
 I talk about design patterns and how I have learned to use them in T-SQL and C# to get a flexible system that can be extended.
 
+- [IsActive-Flag](IsActive.md)
 - [Enumeration](Enumeration.md)
 - [Entity](Entity.md)
 - [Entities which replace each other in/around their validity period](Entity-with-validity-period-one-active.md)
