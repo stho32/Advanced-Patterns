@@ -7,8 +7,11 @@ I talk about design patterns and how I have learned to use them in T-SQL and C# 
 
 - [IsActive-Flag](IsActive.md)
 - [Predecessor and IsActive](Predecessor-and-IsActive.md)
-- [Enumeration](Enumeration.md)
+
 - [Entity](Entity.md)
+- [Enumeration](Enumeration.md)
+- [Reference table](Reference-Table.md)
+
 - [Entities which replace each other in/around their validity period](Entity-with-validity-period-one-active.md)
 - [Entities with validity period that can exist in parallel](Entity-with-validity-period-that-can-exist-in-parallel.md)
 - [Simple linear process](Process-Simple.md)
