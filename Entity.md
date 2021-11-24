@@ -35,3 +35,50 @@ change you make.
 The interfaces will also allow you to implement tests more efficiently. Instead of using mock frameworks simply use your interfaces to implement mocks.
 That is straight forward and you can easily see what you do.
 
+## example
+
+```sql
+CREATE TABLE Car (
+  Id INT NOT NULL PRIMARY KEY IDENTITY,
+  RecordedAt DATETIME NOT NULL DEFAULT GETDATE(),
+  RecordedBy INT NOT NULL REFERENCES Employee(Id),
+  LastChangedAt DATETIME NOT NULL DEFAULT GETDATE(),
+  LastChangedBy INT NOT NULL REFERENCES Employee(Id),
+  
+  Sign VARCHAR(200) NOT NULL,
+  Description VARCHAR(MAX) NOT NULL DEFAULT '',
+  GivenToEmployee INT REFERENCES Employee(Id),
+  
+  IsActive BIT NOT NULL DEFAULT 1
+)
+```
+
+```csharp
+public interface ICar {
+  int Id { get; }
+  DateTime RecordedAt { get; }
+  int RecordedBy { get; }
+  DateTime LastChangedAt { get; }
+  int LastChangedBy { get; }
+  string Sign { get; }
+  string Description { get; }
+  int GivenToEmployee { get; }
+  bool IsActive { get; }
+}
+
+public class Car : ICar {
+  ...
+  ctorp
+}
+
+public interface ICarRepository {
+  ICar[] GetList();
+  ICar GetBySign(string sign);
+  void Save(ICar car);
+}
+
+public class CarRepository : ICarRepository {
+  ...
+}
+
+```
