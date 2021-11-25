@@ -16,7 +16,7 @@ CREATE TABLE HaveComplexLunchProcess (
   CurrentState ... 
   IsCompleted ...
   ...
-  IsActive BIT NOT NULL DEFAULT -1
+  IsActive BIT NOT NULL DEFAULT 1
 )
 
 /*
@@ -26,7 +26,7 @@ CREATE TABLE HaveComplexLunchProcess (
 CREATE TABLE HaveComplexLunchProcessState (
   Id INT NOT NULL PRIMARY KEY IDENTITY,
   ...
-  IsActive BIT NOT NULL DEFAULT -1
+  IsActive BIT NOT NULL DEFAULT 1
 )
 
 /* Another optional table that will reference a state
@@ -35,7 +35,7 @@ CREATE TABLE HaveComplexLunchProcessState (
 CREATE TABLE HaveComplexLunchProcessStateOption (
   Id INT NOT NULL PRIMARY KEY IDENTITY,
   ...
-  IsActive BIT NOT NULL DEFAULT -1
+  IsActive BIT NOT NULL DEFAULT 1
 )
 
 /*
@@ -49,7 +49,7 @@ CREATE TABLE HaveComplexLunchProcessContext (
   [Name] VARCHAR(200) NOT NULL DEFAULT '',
   Value VARCHAR(200) NOT NULL DEFAULT '',
   ...
-  IsActive BIT NOT NULL DEFAULT -1
+  IsActive BIT NOT NULL DEFAULT 1
 )
 
 /*
@@ -67,7 +67,7 @@ CREATE TABLE HaveComplexLunchProcessLog (
   ...Additional data...
   
   StepPerformedBy INT NOT NULL REFERENCE ...,
-  IsActive BIT NOT NULL DEFAULT -1
+  IsActive BIT NOT NULL DEFAULT 1
 )
 ```
 
