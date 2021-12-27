@@ -36,4 +36,5 @@ I talk about design patterns and how I have learned to use them in T-SQL and C# 
 - [ ] WebApi
 - [ ] WebApplication (WebForms)
 - [ ] WebApplication (MVC)
+- [ ] Environment-Factory -> gives access to logging and configuration. Is controlled by a central authority to centralize both aspects.
 
